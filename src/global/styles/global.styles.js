@@ -41,11 +41,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         overflow: auto;
         font-size: 14px;
         line-height: 18px;
+        background-color: rgba(249, 246, 255, 1);
     }
     
     body::-webkit-scrollbar {
@@ -57,7 +58,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     #root {
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        max-width: calc(100vw - 50px - 50px);
+        margin: 0 auto;
     }
 `;
