@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
     }
-    
+
     h1, h2, h3, h4 {
         margin: 0;
     }
@@ -35,31 +35,31 @@ export const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
     }
-    
+
     html {
         scrollbar-width: none;
     }
 
     body {
+        font-family: "League Spartan", sans-serif;
         width: 100%;
         height: 100%;
         overflow: auto;
         font-size: 14px;
         line-height: 18px;
-        background-color: rgba(249, 246, 255, 1);
+        background-color: rgb(255, 255, 255);
     }
-    
+
     body::-webkit-scrollbar {
         display: none;
     }
-    
+
     nav {
         padding: 0 1rem;
     }
 
     #root {
         height: 100vh;
-        max-width: calc(100vw - 50px - 50px);
-        margin: 0 auto;
+        width: 100vw;
     }
 `;
