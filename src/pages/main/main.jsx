@@ -1,4 +1,4 @@
-import {UserList} from '../../components/index.js'
+import {UserList, Content} from '../../components/index.js'
 
 import * as Styled from './main.styles.jsx'
 
@@ -7,7 +7,7 @@ export const Main = () => {
         <Styled.Wrapper>
             <Styled.Main>
                 <UserList />
-                {/*<div style={{width: '1000px', height: '1000px', backgroundColor: 'gray'}}></div>*/}
+                <Content />
             </Styled.Main>
         </Styled.Wrapper>
     )
