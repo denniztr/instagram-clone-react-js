@@ -1,4 +1,4 @@
-import {Logo, Button} from './ui/index.js'
+import {Logo, Navigation} from './ui/index.js'
 
 import * as Styled from './header.styles.js'
 
@@ -8,7 +8,7 @@ export const Header = () => {
       <Styled.Wrapper>
           <Styled.Container>
               <Logo />
-              <Button />
+              <Navigation />
           </Styled.Container>
       </Styled.Wrapper>
   )
