@@ -1,4 +1,6 @@
 
+import {Card} from './ui/index.js'
+
 import * as Styled from './content.styles.js'
 
 
@@ -8,18 +10,7 @@ export const Content = () => {
           <Styled.Wrapper>
               <Styled.Container>
                   <Styled.GridContainer>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
-                      <Styled.Card></Styled.Card>
+                      <Card />
                   </Styled.GridContainer>
               </Styled.Container>
           </Styled.Wrapper>
