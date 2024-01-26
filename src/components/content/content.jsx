@@ -1,9 +1,5 @@
-
 import {Card} from './ui/index.js'
-
 import * as Styled from './content.styles.js'
-
-
 
 export const Content = () => {
       return (
