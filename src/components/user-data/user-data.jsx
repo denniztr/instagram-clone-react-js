@@ -1,10 +1,11 @@
-
+import {Image, UserInfo} from './ui/index.js'
 import * as Styled from './user-data.styles.js'
 
 export const UserData = () => {
     return (
         <Styled.UserDataContainer>
-            <p>два контейнера, слева фотография профиля, справа данные о пользователе</p>
+            <Image />
+            <UserInfo />
         </Styled.UserDataContainer>
     )
 }
