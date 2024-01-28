@@ -11,9 +11,9 @@ export const Logo = styled.h1`
     letter-spacing: 2px;
     font-weight: 300;
     font-size: 38px;
-    
+
     & span {
         font-weight: 320;
-        color: rgb(194, 87, 121);
+        color: rgb(68, 148, 178);
     }
 `;

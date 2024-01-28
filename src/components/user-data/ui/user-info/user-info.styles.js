@@ -58,4 +58,9 @@ export const PrimaryButton = styled.button`
     font-family: "League Spartan", sans-serif;
     letter-spacing: 0.5px;
     font-size: 16px;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: rgb(240, 240, 240);
+    }
 `;
