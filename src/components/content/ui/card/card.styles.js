@@ -49,6 +49,7 @@ export const UserPhoto = styled.div`
     height: 25px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
     
     img {
         width: 100%;

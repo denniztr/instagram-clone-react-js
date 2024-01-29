@@ -1,10 +1,14 @@
-
+import PropTypes from "prop-types";
 import * as Styled from './image.styles.js'
 
-export const Image = () => {
+export const Image = ({profileImage}) => {
     return (
         <Styled.Image>
-            <img src={`https://i.pravatar.cc/500`} alt=""/>
+            <img src={profileImage} alt=""/>
         </Styled.Image>
     )
+}
+
+Image.propTypes = {
+    profileImage: PropTypes.string,
 }

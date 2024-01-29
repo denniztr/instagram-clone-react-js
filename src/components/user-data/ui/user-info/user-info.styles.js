@@ -14,12 +14,20 @@ export const Heading = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     
     & h3 {
         font-size: 24px;
         font-weight: 400;
         letter-spacing: 0.5px;
-        text-shadow: dimgray;
+        color: rgba(0, 0, 0);
+    }
+
+    & span {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: rgb(148, 147, 147);
     }
 `;
 
