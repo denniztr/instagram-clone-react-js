@@ -30,16 +30,16 @@ export const Footer = styled.div`
 export const UserInfo = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 0.7rem;
+    gap: 0.3rem;
     align-items: center;
     
     & h4 {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
     }
     
     & span {
-        font-size: 12px;
+        font-size: 12.5px;
         color: dimgray;
     }
 `;
@@ -63,5 +63,5 @@ export const UserPhoto = styled.div`
 export const CardAction = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
 `;

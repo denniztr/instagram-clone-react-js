@@ -14,6 +14,7 @@ export const postsApi = createApi({
                 url: `/user-posts/${id}`,
             })
         }),
+
     })
 })
 
