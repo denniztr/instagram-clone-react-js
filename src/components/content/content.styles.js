@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 1700px;
+    width: 1500px;
     height: auto;
     margin-top: 2rem;
 `;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const GridContainer = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  // пропсом уменьшить размер карточек
     gap: 1rem;
 `;
 

@@ -1,5 +1,4 @@
 import {UserList, Content} from '../../components/index.js'
-
 import * as Styled from './main.styles.jsx'
 
 export const Main = () => {
