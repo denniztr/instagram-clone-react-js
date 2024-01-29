@@ -16,7 +16,7 @@ export const GridContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  // пропсом уменьшить размер карточек
-    gap: 1rem;
+    gap: 0.5rem;
 `;
 
 

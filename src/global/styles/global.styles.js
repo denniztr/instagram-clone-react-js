@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         display: block;
         text-decoration: none;
         cursor: pointer;
+        color: inherit;
     }
 
     img {
@@ -57,7 +58,13 @@ export const GlobalStyles = createGlobalStyle`
     nav {
         padding: 0 1rem;
     }
-
+    
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    
     #root {
         height: 100vh;
         width: 100vw;
