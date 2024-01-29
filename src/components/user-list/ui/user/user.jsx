@@ -1,5 +1,3 @@
-import { FaPlus } from "react-icons/fa";
-
 import ProfilePic from '../current-user-pic.jpeg'
 
 import * as Styled from './user.styles.js'

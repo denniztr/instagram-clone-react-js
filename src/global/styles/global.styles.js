@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
         overflow: auto;
         font-size: 14px;
         line-height: 18px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(248, 248, 248);
     }
 
     body::-webkit-scrollbar {
