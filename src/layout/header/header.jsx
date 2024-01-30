@@ -1,19 +1,22 @@
 import {Outlet} from "react-router-dom";
-import {Logo, Navigation} from './ui/index.js'
-import * as Styled from './header.styles.js'
-
+import {useSelector} from "react-redux";
+import {Logo, Navigation} from "./ui/index.js";
+import {IoIosAddCircleOutline} from "react-icons/io";
+import * as Styled from "./header.styles.js";
 
 
 export const Header = () => {
+    const currentUser = useSelector((state) => state.user.user);
   return (
       <>
           <Styled.Wrapper>
               <Styled.Container>
                   <Logo />
+                  {currentUser ? <IoIosAddCircleOutline size={35} /> : null}
                   <Navigation />
               </Styled.Container>
           </Styled.Wrapper>
           <Outlet />
       </>
   )
-}
+};
