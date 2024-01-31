@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.div`
     height: 320px;
@@ -9,7 +9,7 @@ export const Image = styled.div`
     height: 260px;
     object-fit: cover;
     // border-radius: 10%;
-    
+
     img {
         width: 100%;
         height: 100%;
@@ -32,12 +32,12 @@ export const UserInfo = styled.div`
     flex-direction: row;
     gap: 0.3rem;
     align-items: center;
-    
+
     & h4 {
         font-size: 14px;
         font-weight: 500;
     }
-    
+
     & span {
         font-size: 12.5px;
         color: dimgray;
@@ -50,7 +50,7 @@ export const UserPhoto = styled.div`
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
-    
+
     img {
         width: 100%;
         height: 100%;

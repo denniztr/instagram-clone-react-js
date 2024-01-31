@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.header`
     width: 100%;
@@ -16,4 +16,3 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 5rem 0 5rem;
 `;
-

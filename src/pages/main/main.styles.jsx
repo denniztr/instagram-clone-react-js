@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 export const Wrapper = styled.section`
     width: 100vw;
@@ -10,4 +9,3 @@ export const Wrapper = styled.section`
 export const Main = styled.main`
     padding: 25px 100px 0 100px;
 `;
-

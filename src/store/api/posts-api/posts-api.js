@@ -1,9 +1,9 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const postsApi = createApi({
     reducerPath: 'posts-api',
     baseQuery: fetchBaseQuery({
-        baseUrl: `https://wedev-api.sky.pro/api/v1/prod/instapro`
+        baseUrl: `https://wedev-api.sky.pro/api/v1/prod/instapro`,
     }),
     endpoints: (build) => ({
         getPosts: build.query({
@@ -12,13 +12,9 @@ export const postsApi = createApi({
         getUserPosts: build.query({
             query: (id) => ({
                 url: `/user-posts/${id}`,
-            })
+            }),
         }),
+    }),
+});
 
-    })
-})
-
-export const {
-    useGetPostsQuery,
-    useGetUserPostsQuery,
-} = postsApi
+export const { useGetPostsQuery, useGetUserPostsQuery } = postsApi;

@@ -1,13 +1,13 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const authApi = createApi({
     reducerPath: 'auth-api',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://wedev-api.sky.pro/'
+        baseUrl: 'https://wedev-api.sky.pro/',
     }),
     endpoints: (build) => ({
         registerUser: build.mutation({
-            query: ({name, login, password}) => ({
+            query: ({ name, login, password }) => ({
                 url: 'api/user',
                 method: 'POST',
                 body: JSON.stringify({
@@ -18,19 +18,16 @@ export const authApi = createApi({
             }),
         }),
         loginUser: build.mutation({
-            query: ({login, password}) => ({
+            query: ({ login, password }) => ({
                 url: 'api/user/login',
                 method: 'POST',
                 body: JSON.stringify({
                     login,
-                    password
-                })
+                    password,
+                }),
             }),
         }),
     }),
 });
 
-export const {
-    useRegisterUserMutation,
-    useLoginUserMutation,
-} = authApi;
+export const { useRegisterUserMutation, useLoginUserMutation } = authApi;

@@ -1,10 +1,8 @@
-import PropTypes from "prop-types";
-import { IoClose } from "react-icons/io5";
-import * as Styled from './modal.styles.js'
+import PropTypes from 'prop-types';
+import { IoClose } from 'react-icons/io5';
+import * as Styled from './modal.styles.js';
 
-
-export const Modal = ({post, setIsModal}) => {
-    console.log(post[0])
+export const Modal = ({ post, setIsModal }) => {
     return (
         <Styled.ModalWrapper>
             <Styled.Container>
@@ -16,14 +14,14 @@ export const Modal = ({post, setIsModal}) => {
                 <Styled.PostActionContainer>
                     <Styled.Icons>
                         <IoClose
-                            style={{cursor: 'pointer'}}
+                            style={{ cursor: 'pointer' }}
                             size={35}
                             onClick={() => setIsModal(false)}
                         />
                     </Styled.Icons>
                     <Styled.PostData>
                         <Styled.UserPhoto>
-                            <img src={post[0].user.imageUrl} alt=""/>
+                            <img src={post[0].user.imageUrl} alt="" />
                         </Styled.UserPhoto>
                         <Styled.UserInfo>
                             <h4>{post[0].user.name}</h4>
@@ -42,10 +40,10 @@ export const Modal = ({post, setIsModal}) => {
                 </Styled.PostActionContainer>
             </Styled.Container>
         </Styled.ModalWrapper>
-    )
-}
+    );
+};
 
 Modal.propTypes = {
     post: PropTypes.array,
     setIsModal: PropTypes.any,
-}
+};

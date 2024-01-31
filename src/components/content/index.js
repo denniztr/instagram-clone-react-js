@@ -1,1 +1,1 @@
-export * from './content.jsx'
+export * from './content.jsx';

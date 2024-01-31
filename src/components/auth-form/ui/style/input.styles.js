@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FormContainer = styled.div`
     width: 100%;
@@ -11,7 +11,7 @@ export const FormContainer = styled.div`
 `;
 
 export const FormLogo = styled.h2`
-    font-family: "League Spartan", sans-serif;
+    font-family: 'League Spartan', sans-serif;
     letter-spacing: 2px;
     font-weight: 350;
     font-size: 26px;
@@ -26,7 +26,7 @@ export const Form = styled.form`
 
     & input {
         width: 100%;
-        font-family: "League Spartan", sans-serif;
+        font-family: 'League Spartan', sans-serif;
         letter-spacing: 0.3px;
         padding: 0.5rem;
         border: 1px solid rgb(224, 224, 224);
@@ -41,7 +41,7 @@ export const Button = styled.button`
     height: 35px;
     background-color: transparent;
     border: 0.5px solid rgba(224, 224, 224, 0.8);
-    font-family: "League Spartan", sans-serif;
+    font-family: 'League Spartan', sans-serif;
     letter-spacing: 0.5px;
     font-size: 16px;
     margin-top: 1rem;

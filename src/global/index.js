@@ -1,1 +1,1 @@
-export * from './styles/index.js'
+export * from './styles/index.js';

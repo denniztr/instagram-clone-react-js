@@ -1,4 +1,4 @@
-import * as Styled from './logo.styles.js'
+import * as Styled from './logo.styles.js';
 
 export const Logo = () => {
     return (
@@ -9,5 +9,5 @@ export const Logo = () => {
                 <span>pro</span>
             </Styled.Logo>
         </Styled.LogoContainer>
-    )
-}
+    );
+};

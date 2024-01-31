@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -15,8 +15,9 @@ export const Container = styled.div`
 export const GridContainer = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  // пропсом уменьшить размер карточек
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(280px, 1fr)
+    ); // пропсом уменьшить размер карточек
     gap: 0.5rem;
 `;
-
-

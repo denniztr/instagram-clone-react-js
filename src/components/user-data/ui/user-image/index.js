@@ -1,1 +1,1 @@
-export * from './image.jsx'
+export * from './image.jsx';

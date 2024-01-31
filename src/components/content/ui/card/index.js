@@ -1,1 +1,1 @@
-export * from './card.jsx'
+export * from './card.jsx';

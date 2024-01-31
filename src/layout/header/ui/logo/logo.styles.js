@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LogoContainer = styled.div`
     width: 122px;
@@ -7,7 +7,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const Logo = styled.h1`
-    font-family: "League Spartan", sans-serif;
+    font-family: 'League Spartan', sans-serif;
     letter-spacing: 2px;
     font-weight: 300;
     font-size: 38px;

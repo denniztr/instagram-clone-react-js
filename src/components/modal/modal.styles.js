@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ModalWrapper = styled.div`
     width: 100vw;
@@ -17,7 +17,7 @@ export const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     display: flex;
     flex-direction: row;
@@ -28,7 +28,6 @@ export const ImageContainer = styled.div`
     width: 55%;
     position: relative;
 `;
-
 
 export const Image = styled.div`
     width: calc(100% - 0.5rem - 0.5rem);
@@ -43,7 +42,6 @@ export const Image = styled.div`
         height: 100%;
         object-fit: cover;
     }
-    
 `;
 
 export const PostActionContainer = styled.div`
@@ -73,7 +71,7 @@ export const UserPhoto = styled.div`
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
-    
+
     img {
         width: 100%;
         height: 100%;
@@ -86,12 +84,12 @@ export const UserPhoto = styled.div`
 export const UserInfo = styled.div`
     display: flex;
     gap: 0.5rem;
-    
+
     & h4 {
         font-size: 22px;
         font-weight: 500;
     }
-    
+
     & span {
         font-size: 16px;
         color: dimgray;
@@ -102,14 +100,13 @@ export const DescriptionContainer = styled.div`
     width: 100%;
     height: auto;
     padding-top: 1rem;
-    
+
     & p {
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.5px;
         padding-bottom: 1rem;
     }
-    
 `;
 
 export const Comments = styled.div`
@@ -125,5 +122,3 @@ export const CommentsHeading = styled.h3`
         color: dimgray;
     }
 `;
-
-
