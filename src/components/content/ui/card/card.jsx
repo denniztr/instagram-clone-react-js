@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { FaRegHeart } from 'react-icons/fa';
 import { LuMessageSquare } from 'react-icons/lu';
+import {LikeIcon} from '../../../../shared/index.js'
 import * as Styled from './card.styles.js';
 
-export const Card = (props) => {
+export const Card = props => {
     const {
         id: postId,
         imageUrl: img,
-        isLiked: liked,
+        likes: likes,
+        isLiked: isLiked,
         user: {
             id: userId,
             imageUrl: userImgUrl,
@@ -36,7 +37,7 @@ export const Card = (props) => {
                     <span>{userLogin}</span>
                 </Styled.UserInfo>
                 <Styled.CardAction>
-                    <FaRegHeart />
+                    <LikeIcon id={postId} likes={props.likes} userId={userId} liked={props.isLiked}/>
                     <LuMessageSquare />
                 </Styled.CardAction>
             </Styled.Footer>
@@ -47,6 +48,7 @@ export const Card = (props) => {
 Card.propTypes = {
     id: PropTypes.string,
     imageUrl: PropTypes.string,
+    likes: PropTypes.array,
     isLiked: PropTypes.bool,
     user: PropTypes.shape({
         id: PropTypes.string,

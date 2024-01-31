@@ -11,7 +11,6 @@ const userSlice = createSlice({
             state.user = action.payload;
             state.token = action.payload.token;
             localStorage.setItem('user', JSON.stringify(state.user))
-            console.log(state.user)
         },
     },
 });

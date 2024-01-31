@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const postsApi = createApi({
     reducerPath: 'posts-api',
     baseQuery: fetchBaseQuery({
-        baseUrl: `https://wedev-api.sky.pro/api/v1/testtest/instapro`,
+        baseUrl: `https://wedev-api.sky.pro/api/v1/test121/instapro`,
         prepareHeaders: (headers, { getState }) => {
             const token = getState().user.token;
             if (token) headers.set('Authorization', `Bearer ${token}`);
@@ -28,8 +28,20 @@ export const postsApi = createApi({
                 }),
             }),
         }),
+        likeAction: build.mutation({
+            query: ({ id }) => ({
+                url: `/${id}/like`,
+                method: 'POST',
+            }),
+        }),
+        dislikeAction: build.mutation({
+            query: ({ id }) => ({
+                url: `/${id}/dislike`,
+                method: 'POST',
+            }),
+        }),
     }),
 });
 
-export const { useGetPostsQuery, useGetUserPostsQuery, useUploadPostMutation } =
+export const { useGetPostsQuery, useGetUserPostsQuery, useUploadPostMutation, useLikeActionMutation, useDislikeActionMutation } =
     postsApi;

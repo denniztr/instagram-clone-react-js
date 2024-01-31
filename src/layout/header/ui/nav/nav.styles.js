@@ -6,4 +6,5 @@ export const NavContainer = styled.nav`
     flex-wrap: nowrap;
     align-items: center;
     gap: 2rem;
+    position: relative;
 `;

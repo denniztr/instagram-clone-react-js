@@ -6,18 +6,18 @@ import { IoIosAddCircleOutline } from 'react-icons/io';
 import * as Styled from './header.styles.js';
 
 export const Header = () => {
-    const currentUser = useSelector((state) => state.user.user);
+    const user = useSelector((state) => state.user.user);
     return (
         <>
             <Styled.Wrapper>
                 <Styled.Container>
                     <Logo />
-                    {currentUser ? (
+                    {user ? (
                         <Link to="add">
                             <IoIosAddCircleOutline size={35} />
                         </Link>
                     ) : null}
-                    <Navigation />
+                    <Navigation user={user} />
                 </Styled.Container>
             </Styled.Wrapper>
             <Outlet />
