@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import { MdOutlineAdd } from 'react-icons/md';
 
-export const FormWrapper = styled.div``;
+export const FormWrapper = styled.div`
+    align-self: ${(props) => props.signup && 'center'};
+`;
 
 export const UploadImageContainer = styled.div`
-    width: 300px;
-    height: 300px;
+    width: ${(props) => (props.signup ? '100px' : '300px')};
+    height: ${(props) => (props.signup ? '100px' : '300px')};
     background-color: transparent;
     border: 2px dashed rgb(200, 200, 200);
     position: relative;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.2s;
     border-radius: 2px;
-
     &:hover {
         background-color: rgb(240, 240, 240);
     }

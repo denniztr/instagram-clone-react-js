@@ -14,7 +14,18 @@ export const postsApi = createApi({
                 url: `/user-posts/${id}`,
             }),
         }),
+        uploadPost: build.mutation({
+            query: ({ description, imageUrl }) => ({
+                url: '',
+                method: 'POST',
+                body: JSON.stringify({
+                    description,
+                    imageUrl,
+                }),
+            }),
+        }),
     }),
 });
 
-export const { useGetPostsQuery, useGetUserPostsQuery } = postsApi;
+export const { useGetPostsQuery, useGetUserPostsQuery, useUploadPostMutation } =
+    postsApi;

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Logo, Navigation } from './ui/index.js';
 import { IoIosAddCircleOutline } from 'react-icons/io';
 import * as Styled from './header.styles.js';
@@ -11,7 +12,11 @@ export const Header = () => {
             <Styled.Wrapper>
                 <Styled.Container>
                     <Logo />
-                    {currentUser ? <IoIosAddCircleOutline size={35} /> : null}
+                    {currentUser ? (
+                        <Link to="add">
+                            <IoIosAddCircleOutline size={35} />
+                        </Link>
+                    ) : null}
                     <Navigation />
                 </Styled.Container>
             </Styled.Wrapper>

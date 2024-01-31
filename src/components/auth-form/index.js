@@ -1,1 +1,1 @@
-export * from './auth-form.jsx'
+export * from './auth-form.jsx';

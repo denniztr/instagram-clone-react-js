@@ -1,1 +1,1 @@
-export * from './signup.jsx'
+export * from './signup.jsx';

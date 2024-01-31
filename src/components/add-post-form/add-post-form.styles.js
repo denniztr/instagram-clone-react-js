@@ -23,7 +23,7 @@ export const FormContainer = styled.div`
         border: 0.5px solid rgba(224, 224, 224, 0.8);
         font-family: 'League Spartan', sans-serif;
         letter-spacing: 0.5px;
-        transition: all 0.5s;
+        transition: all 0.2s;
         padding: 10px;
 
         &:hover {
@@ -46,7 +46,7 @@ export const AddPostButton = styled.button`
     font-family: 'League Spartan', sans-serif;
     letter-spacing: 0.5px;
     font-size: 16px;
-    transition: all 0.5s;
+    transition: all 0.2s;
 
     &:hover {
         background-color: rgb(240, 240, 240);

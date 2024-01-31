@@ -7,13 +7,14 @@ export const authApi = createApi({
     }),
     endpoints: (build) => ({
         registerUser: build.mutation({
-            query: ({ name, login, password }) => ({
+            query: ({ name, login, password, imageUrl }) => ({
                 url: 'api/user',
                 method: 'POST',
                 body: JSON.stringify({
                     name,
                     login,
                     password,
+                    imageUrl,
                 }),
             }),
         }),
