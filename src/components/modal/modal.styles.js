@@ -92,7 +92,7 @@ export const UserInfo = styled.div`
 
     & span {
         font-size: 16px;
-        color: dimgray;
+        color: #8c8c8c;
     }
 `;
 
@@ -102,23 +102,15 @@ export const DescriptionContainer = styled.div`
     padding-top: 1rem;
 
     & p {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 0.5px;
         padding-bottom: 1rem;
     }
-`;
 
-export const Comments = styled.div`
-    width: 100%;
-    height: 100%;
-`;
-
-export const CommentsHeading = styled.h3`
-    width: 100%;
-    margin-top: 2rem;
-    & h3 {
-        font-weight: 400;
-        color: dimgray;
+    & span {
+        font-size: 14px;
+        color: #8c8c8c;
     }
 `;
+

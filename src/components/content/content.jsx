@@ -4,7 +4,7 @@ import { Card } from './ui/index.js';
 import { Modal } from '../modal/index.js';
 import * as Styled from './content.styles.js';
 
-export const Content = ({ contentWidth, posts }) => {
+export const Content = ({ contentWidth, posts, refetch }) => {
     const [isModal, setIsModal] = useState(false);
     const [selectedPost, setSelectedPost] = useState(null);
 
@@ -28,6 +28,7 @@ export const Content = ({ contentWidth, posts }) => {
                             key={post.id}
                             {...post}
                             getPostClick={getPostClick}
+                            refetch={refetch}
                         />
                     ))}
                 </Styled.GridContainer>

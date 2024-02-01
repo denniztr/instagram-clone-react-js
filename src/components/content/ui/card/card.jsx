@@ -17,6 +17,7 @@ export const Card = props => {
             name: userName,
         },
         getPostClick: getPostClick,
+        refetch: refetch,
     } = props;
 
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ export const Card = props => {
                     <span>{userLogin}</span>
                 </Styled.UserInfo>
                 <Styled.CardAction>
-                    <LikeIcon id={postId} likes={props.likes} userId={userId} liked={props.isLiked}/>
+                    <LikeIcon id={postId} likes={props.likes} userId={userId} liked={props.isLiked} refetch={refetch}/>
                     <LuMessageSquare />
                 </Styled.CardAction>
             </Styled.Footer>

@@ -13,7 +13,7 @@ export const Main = () => {
     return (
         <Styled.Wrapper>
             <Styled.Main>
-                {isLoading ? <p>Loading</p> : <Content posts={data} />}
+                {isLoading ? <p>Loading</p> : <Content posts={data} refetch={refetch} />}
             </Styled.Main>
         </Styled.Wrapper>
     );

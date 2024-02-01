@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {formatDistanceToNow} from 'date-fns'
 import { IoClose } from 'react-icons/io5';
 import * as Styled from './modal.styles.js';
 
@@ -30,13 +31,8 @@ export const Modal = ({ post, setIsModal }) => {
                     </Styled.PostData>
                     <Styled.DescriptionContainer>
                         <p>{post[0].description}</p>
-                        <span>{post[0].createdAt}</span>
+                        <span>{formatDistanceToNow(new Date(post[0].createdAt))} ago</span>
                     </Styled.DescriptionContainer>
-                    <Styled.Comments>
-                        <Styled.CommentsHeading>
-                            <h3>Comments</h3>
-                        </Styled.CommentsHeading>
-                    </Styled.Comments>
                 </Styled.PostActionContainer>
             </Styled.Container>
         </Styled.ModalWrapper>
