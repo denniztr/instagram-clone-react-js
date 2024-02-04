@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
     width: 75px;
@@ -8,20 +8,19 @@ export const ModalContainer = styled.div`
     position: absolute;
     top: 50px;
     right: 10px;
-    
+
     & ul {
         padding: 0.7rem;
-        
+
         & li {
             font-size: 16px;
             letter-spacing: 0.6px;
             font-weight: 400;
             cursor: pointer;
         }
-        
+
         & li:last-child {
             margin-top: 0.5rem;
         }
     }
-    
 `;

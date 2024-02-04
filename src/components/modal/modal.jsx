@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import {formatDistanceToNow} from 'date-fns'
+import { formatDistanceToNow } from 'date-fns';
 import { IoClose } from 'react-icons/io5';
+import { LikeIcon } from '../../shared/index.js';
 import * as Styled from './modal.styles.js';
 
-export const Modal = ({ post, setIsModal }) => {
+export const Modal = ({ post, setIsModal, refetch }) => {
+    console.log(post[0]);
     return (
         <Styled.ModalWrapper>
             <Styled.Container>
@@ -31,8 +33,16 @@ export const Modal = ({ post, setIsModal }) => {
                     </Styled.PostData>
                     <Styled.DescriptionContainer>
                         <p>{post[0].description}</p>
-                        <span>{formatDistanceToNow(new Date(post[0].createdAt))} ago</span>
+                        <span>
+                            {formatDistanceToNow(new Date(post[0].createdAt))}{' '}
+                            ago
+                        </span>
                     </Styled.DescriptionContainer>
+                    <LikeIcon
+                        id={post[0].id}
+                        liked={post[0].isLiked}
+                        refetch={refetch}
+                    />
                 </Styled.PostActionContainer>
             </Styled.Container>
         </Styled.ModalWrapper>

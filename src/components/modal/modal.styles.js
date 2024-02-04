@@ -113,4 +113,3 @@ export const DescriptionContainer = styled.div`
         color: #8c8c8c;
     }
 `;
-

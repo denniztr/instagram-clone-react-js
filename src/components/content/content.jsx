@@ -19,7 +19,11 @@ export const Content = ({ contentWidth, posts, refetch }) => {
     return (
         <Styled.Wrapper>
             {isModal ? (
-                <Modal post={selectedPost} setIsModal={setIsModal} />
+                <Modal
+                    post={selectedPost}
+                    setIsModal={setIsModal}
+                    refetch={refetch}
+                />
             ) : null}
             <Styled.Container style={{ width: contentWidth }}>
                 <Styled.GridContainer>

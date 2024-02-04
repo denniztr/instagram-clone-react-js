@@ -43,5 +43,10 @@ export const postsApi = createApi({
     }),
 });
 
-export const { useGetPostsQuery, useGetUserPostsQuery, useUploadPostMutation, useLikeActionMutation, useDislikeActionMutation } =
-    postsApi;
+export const {
+    useGetPostsQuery,
+    useGetUserPostsQuery,
+    useUploadPostMutation,
+    useLikeActionMutation,
+    useDislikeActionMutation,
+} = postsApi;

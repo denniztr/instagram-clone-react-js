@@ -1,1 +1,1 @@
-export * from './like.jsx'
+export * from './like.jsx';

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { LuMessageSquare } from 'react-icons/lu';
-import {LikeIcon} from '../../../../shared/index.js'
+import { LikeIcon } from '../../../../shared/index.js';
 import * as Styled from './card.styles.js';
 
-export const Card = props => {
+export const Card = (props) => {
     const {
         id: postId,
         imageUrl: img,
@@ -38,7 +38,13 @@ export const Card = props => {
                     <span>{userLogin}</span>
                 </Styled.UserInfo>
                 <Styled.CardAction>
-                    <LikeIcon id={postId} likes={props.likes} userId={userId} liked={props.isLiked} refetch={refetch}/>
+                    <LikeIcon
+                        id={postId}
+                        // likes={props.likes}
+                        // userId={userId}
+                        liked={props.isLiked}
+                        refetch={refetch}
+                    />
                     <LuMessageSquare />
                 </Styled.CardAction>
             </Styled.Footer>
