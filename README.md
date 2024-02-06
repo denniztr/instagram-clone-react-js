@@ -1,8 +1,31 @@
-# React + Vite
+<h1>Instapro</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>Instapro is a photo-sharing application. The app allows users to register and publish photos to a common feed of posts. Additionally, users can like photos posted by other users. Furthermore, there is an option to view the publications of a specific user and the number of their publications.</p>
 
-Currently, two official plugins are available:
+- React
+- Redux Toolkit
+- Vite
+- styled-components
+- RTK Query
+- Prettier
+- ESLint
+- react-icons
+- Axios
+- date-fns
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- User registration and authentication
+- Posting photos to a common feed
+- Liking photos posted by other users
+- Viewing publications of specific users
+- Displaying the number of publications for each user
+
+## Installation
+
+1. Clone the repository: git clone <repository-url>
+2. Install dependencies: npm install
+3. Start the development server: npm run dev
+
+
+Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts."

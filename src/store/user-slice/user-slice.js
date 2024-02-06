@@ -10,8 +10,8 @@ const userSlice = createSlice({
         setUser: (state, action) => {
             state.user = action.payload;
             state.token = action.payload.token;
-            localStorage.setItem('user', JSON.stringify(state.user))
-            console.log(state.user)
+            localStorage.setItem('user', JSON.stringify(state.user));
+            localStorage.setItem('token', state.token);
         },
     },
 });

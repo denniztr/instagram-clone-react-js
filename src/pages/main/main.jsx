@@ -1,19 +1,23 @@
+import { useEffect } from 'react';
 import { Content } from '../../components/index.js';
 import { useGetPostsQuery } from '../../store/api/index.js';
+import { Loader } from '../../shared/index.js';
 import * as Styled from './main.styles.jsx';
-import { useEffect } from 'react'
 
 export const Main = () => {
     const { data, isLoading, refetch } = useGetPostsQuery();
-
     useEffect(() => {
-      refetch()
-    }, [refetch])
+        refetch();
+    }, [refetch]);
 
     return (
         <Styled.Wrapper>
             <Styled.Main>
-                {isLoading ? <p>Loading</p> : <Content posts={data} />}
+                {isLoading ? (
+                    <Loader />
+                ) : (
+                    <Content posts={data} refetch={refetch} />
+                )}
             </Styled.Main>
         </Styled.Wrapper>
     );
