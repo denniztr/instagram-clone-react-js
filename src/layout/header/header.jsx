@@ -6,7 +6,9 @@ import { IoIosAddCircleOutline } from 'react-icons/io';
 import * as Styled from './header.styles.js';
 
 export const Header = () => {
-    const user = useSelector((state) => state.user.user);
+    // const user = useSelector((state) => state.user.user);
+    const user = JSON.parse(localStorage.getItem('user'));
+
     return (
         <>
             <Styled.Wrapper>

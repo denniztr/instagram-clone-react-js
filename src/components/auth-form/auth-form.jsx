@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SignIn, SignUp } from './ui/index.js';
@@ -6,6 +6,7 @@ import {
     useRegisterUserMutation,
     useLoginUserMutation,
 } from '../../store/api/index.js';
+import { ModalError } from '../modal-error/index.js';
 import { setUser } from '../../store/user-slice/user-slice.js';
 import * as Styled from './auth-form.styles.js';
 
@@ -18,6 +19,7 @@ export const AuthForm = () => {
     const [login, setLogin] = useState(null);
     const [password, setPassword] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
+    const [error, setError] = useState(null);
 
     const [registerUser] = useRegisterUserMutation();
     const [loginUser] = useLoginUserMutation();
@@ -31,11 +33,12 @@ export const AuthForm = () => {
             imageUrl: imageUrl,
         })
             .unwrap()
-            .then((res) => console.log(res))
-            .catch((error) => console.log(error.data))
-            .finally(() => {
-                setLogin(null);
-                setPassword(null);
+            .then((res) => {
+                console.log(res);
+                setIsSignUp(false);
+            })
+            .catch(() => {
+                setError('The data is not filled in');
             });
     };
 
@@ -49,15 +52,30 @@ export const AuthForm = () => {
                     navigate('/');
                 }
             })
-            .catch((error) => console.log(error.status))
+            .catch((error) => {
+                if (error.status === 400) {
+                    setError('Invalid login or password');
+                } else {
+                    setError('Please try again');
+                }
+            })
             .finally(() => {
                 setLogin(null);
                 setPassword(null);
             });
     };
 
+    useEffect(() => {
+        if (error) {
+            setTimeout(() => {
+                setError(null);
+            }, 2500);
+        }
+    }, [error, setError]);
+
     return (
         <Styled.AuthWrapper>
+            {error ? <ModalError error={error} /> : null}
             <Styled.AuthContainer>
                 <Link to="/">
                     <Styled.FormLogo>instapro</Styled.FormLogo>

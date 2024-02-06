@@ -1,39 +1,14 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import { Card } from './ui/index.js';
-import { Modal } from '../modal/index.js';
 import * as Styled from './content.styles.js';
 
 export const Content = ({ contentWidth, posts, refetch }) => {
-    const [isModal, setIsModal] = useState(false);
-    const [selectedPost, setSelectedPost] = useState(null);
-
-    const getPostClick = (postId) => {
-        const filterSelectedPost = posts.posts.filter(
-            (post) => post.id === postId,
-        );
-        setSelectedPost(filterSelectedPost);
-        setIsModal(true);
-    };
-
     return (
         <Styled.Wrapper>
-            {isModal ? (
-                <Modal
-                    post={selectedPost}
-                    setIsModal={setIsModal}
-                    refetch={refetch}
-                />
-            ) : null}
             <Styled.Container style={{ width: contentWidth }}>
                 <Styled.GridContainer>
                     {posts.posts.map((post) => (
-                        <Card
-                            key={post.id}
-                            {...post}
-                            getPostClick={getPostClick}
-                            refetch={refetch}
-                        />
+                        <Card key={post.id} {...post} refetch={refetch} />
                     ))}
                 </Styled.GridContainer>
             </Styled.Container>

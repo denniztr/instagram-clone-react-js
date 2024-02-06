@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 import {
     useLikeActionMutation,
@@ -17,7 +18,7 @@ export const LikeIcon = ({ id, liked, refetch }) => {
                 console.log(res);
                 refetch();
             })
-            .catch((error) => console.log(error));
+            .catch(() => {});
     };
 
     const handleDislike = (event) => {
@@ -25,7 +26,6 @@ export const LikeIcon = ({ id, liked, refetch }) => {
         dislikeAction({ id })
             .unwrap()
             .then((res) => {
-                console.log(res);
                 refetch();
             })
             .catch((error) => console.log(error));
@@ -33,6 +33,7 @@ export const LikeIcon = ({ id, liked, refetch }) => {
 
     return (
         <FaRegHeart
+            size={15}
             style={{
                 cursor: 'pointer',
                 color: liked ? 'red' : 'black',

@@ -44,7 +44,7 @@ export const Button = styled.button`
     font-family: 'League Spartan', sans-serif;
     letter-spacing: 0.5px;
     font-size: 16px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     transition: all 0.5s;
 
     &:hover {

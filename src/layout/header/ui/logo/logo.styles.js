@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { device } from '../../../../global/styles/media-query.js';
 
 export const LogoContainer = styled.div`
     width: 122px;
     height: auto;
     cursor: pointer;
+
+    @media ${device.tablet} {
+        width: 75px;
+    }
 `;
 
 export const Logo = styled.h1`
@@ -12,8 +17,7 @@ export const Logo = styled.h1`
     font-weight: 300;
     font-size: 38px;
 
-    & span {
-        font-weight: 320;
-        color: rgb(68, 148, 178);
+    @media ${device.tablet} {
+        font-size: 22px;
     }
 `;

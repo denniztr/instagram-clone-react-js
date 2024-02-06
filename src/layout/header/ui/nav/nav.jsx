@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaRegUser, FaRegHeart } from 'react-icons/fa';
+import { FaRegUser } from 'react-icons/fa';
 import { Modal } from '../modal/index.js';
 import * as Styled from './nav.styles.js';
 
@@ -19,12 +19,7 @@ export const Navigation = ({ user }) => {
 
     return (
         <Styled.NavContainer>
-            <FaRegHeart size={20} />
-            <FaRegUser
-                size={20}
-                style={{ cursor: 'pointer' }}
-                onClick={() => userIconClick()}
-            />
+            <Styled.RegUserIcon size={20} onClick={() => userIconClick()} />
             {modal && <Modal />}
         </Styled.NavContainer>
     );

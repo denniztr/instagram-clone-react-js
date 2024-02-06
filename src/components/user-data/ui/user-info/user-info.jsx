@@ -13,16 +13,7 @@ export const UserInfo = ({ posts }) => {
                 <p>
                     <span>{postsQuantity}</span>posts
                 </p>
-                <p>
-                    <span>23</span>followers
-                </p>
-                <p>
-                    <span>13</span>following
-                </p>
             </Styled.UserProfileStats>
-            <Styled.ButtonsContainer>
-                <Styled.PrimaryButton>Follow</Styled.PrimaryButton>
-            </Styled.ButtonsContainer>
         </Styled.UserInfoContainer>
     );
 };
