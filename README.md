@@ -23,9 +23,9 @@
 
 ## Installation
 
-1. Clone the repository: git clone <repository-url>
+1. Clone the repository: git clone [https://github.com/denniztr/instapro-reactjs.git](https://github.com/denniztr/instapro-react-js.git)
 2. Install dependencies: npm install
 3. Start the development server: npm run dev
 
 
-Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts."
+Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts
