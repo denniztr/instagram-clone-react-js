@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetUserPostsQuery } from '../../store/api/index.js';
 import { UserData, Content } from '../../components/index.js';
+import { Loader } from '../../shared/index.js';
 import * as Styled from './profile-styles.js';
 
 export const Profile = () => {
@@ -21,7 +22,7 @@ export const Profile = () => {
                     {isLoading ? null : <UserData data={data} />}
                 </Styled.UserDataWrapper>
                 {isLoading ? (
-                    <p>Loading</p>
+                    <Loader />
                 ) : (
                     <Content
                         contentWidth={contentWidth}

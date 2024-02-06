@@ -1,23 +1,5 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-`;
-
-export const FormLogo = styled.h2`
-    font-family: 'League Spartan', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 350;
-    font-size: 26px;
-    text-align: center;
-`;
-
 export const Form = styled.form`
     width: 100%;
     display: flex;

@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const postsApi = createApi({
     reducerPath: 'posts-api',
     baseQuery: fetchBaseQuery({
-        baseUrl: `https://wedev-api.sky.pro/api/v1/testtest/instapro`,
+        baseUrl: `https://wedev-api.sky.pro/api/v1/instaprodenniztest/instapro`,
         prepareHeaders: (headers, { getState }) => {
             // const token = getState().user.token;
             const token = localStorage.getItem('token');

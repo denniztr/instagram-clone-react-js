@@ -27,6 +27,7 @@ export const UploadImageContainer = styled.div`
         height: 100%;
         position: absolute;
         z-index: 5;
+        object-fit: contain;
     }
 `;
 

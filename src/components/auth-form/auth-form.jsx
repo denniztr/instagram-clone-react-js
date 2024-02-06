@@ -33,8 +33,7 @@ export const AuthForm = () => {
             imageUrl: imageUrl,
         })
             .unwrap()
-            .then((res) => {
-                console.log(res);
+            .then(() => {
                 setIsSignUp(false);
             })
             .catch(() => {
