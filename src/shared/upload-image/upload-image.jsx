@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { Loader } from '../loader/index.js';
 import * as Styled from './upload-image.styles.js';
 
 import axios from 'axios';
 
 export const UploadImage = ({ imageUrl, setImageUrl, signup }) => {
     const fileInputRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleFileChange = (file) => {
+        setIsLoading(true);
         const data = new FormData();
         data.append('file', file);
         axios
             .post('https://wedev-api.sky.pro/api/upload/image', data)
             .then((res) => {
+                setIsLoading(false);
                 setImageUrl(res.data.fileUrl);
             });
     };
@@ -37,7 +41,11 @@ export const UploadImage = ({ imageUrl, setImageUrl, signup }) => {
                     />
                     <Styled.AddPostIcon size={50} />
                 </label>
-                {imageUrl && <img src={imageUrl} alt="" />}
+                {isLoading ? (
+                    <Loader />
+                ) : (
+                    imageUrl && <img src={imageUrl} alt="" />
+                )}
             </Styled.UploadImageContainer>
         </Styled.FormWrapper>
     );
