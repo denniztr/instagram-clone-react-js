@@ -1,15 +1,14 @@
-import { GlobalStyles } from './global/index.js'
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './router.jsx';
+import { GlobalStyles } from './global/index.js';
 
 function App() {
-  return (
-      <>
-          <GlobalStyles />
-          <nav style={{width: '100%', minHeight: '70px', backgroundColor: 'gray'}}>
-              <h3>Hello World!</h3>
-          </nav>
-
-      </>
-  )
+    return (
+        <BrowserRouter>
+            <GlobalStyles />
+            <AppRouter />
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

@@ -1,11 +1,11 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     * {
         padding: 0;
         margin: 0;
     }
-    
+
     h1, h2, h3, h4 {
         margin: 0;
     }
@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         display: block;
         text-decoration: none;
         cursor: pointer;
+        color: inherit;
     }
 
     img {
@@ -35,29 +36,37 @@ export const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
     }
-    
+
     html {
         scrollbar-width: none;
     }
 
     body {
-        width: 100vw;
-        height: 100vh;
+        font-family: "League Spartan", sans-serif;
+        width: 100%;
+        height: 100%;
         overflow: auto;
         font-size: 14px;
         line-height: 18px;
+        background-color: rgba(248, 248, 248);
     }
-    
+
     body::-webkit-scrollbar {
         display: none;
     }
-    
+
     nav {
         padding: 0 1rem;
     }
-
+    
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    
     #root {
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 `;

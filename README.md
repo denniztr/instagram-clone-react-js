@@ -1,6 +1,31 @@
-# Instagram Clone App
+<h1>Instapro</h1>
 
-A web application, a mini social network where users can create a profile with a profile picture, add posts to their feed with photo and description, like or comment on other posts. Additionally, the application allows users to view profiles of other users and liked posts. 
+<p>Instapro is a photo-sharing application. The app allows users to register and publish photos to a common feed of posts. Additionally, users can like photos posted by other users. Furthermore, there is an option to view the publications of a specific user and the number of their publications.</p>
 
-Currently in development.
+- React
+- Redux Toolkit
+- Vite
+- styled-components
+- RTK Query
+- Prettier
+- ESLint
+- react-icons
+- Axios
+- date-fns
 
+## Features
+
+- User registration and authentication
+- Posting photos to a common feed
+- Liking photos posted by other users
+- Viewing publications of specific users
+- Displaying the number of publications for each user
+
+## Installation
+
+1. Clone the repository: git clone [https://github.com/denniztr/instapro-reactjs.git](https://github.com/denniztr/instapro-react-js.git)
+2. Install dependencies: npm install
+3. Start the development server: npm run dev
+
+
+Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts
