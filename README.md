@@ -28,4 +28,4 @@
 3. Start the development server: npm run dev
 
 
-Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts."
+Feel free to test this application. I appreciate and welcome any feedback, so please don't hesitate to provide your thoughts
